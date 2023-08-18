@@ -7,63 +7,7 @@ draft: false
 
 Quadrille memory read-write property.
 
-# Examples
-
-## Read
-
-(mouse click or press any key and see the console)  
-{{< p5-global-iframe lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" id="number" width="425" height="425" >}}
-`use strict`;
-let quadrille;
-let arr;
-
-function setup() {
-  createCanvas(4 * Quadrille.CELL_LENGTH, 4 * Quadrille.CELL_LENGTH);
-  quadrille = createQuadrille(4, 4, 7, 75);
-  arr = quadrille.memory2D;
-}
-
-function draw() {
-  background('#6495ED');
-  drawQuadrille(quadrille);
-}
-
-function mouseClicked() {
-  console.log(arr[quadrille.mouseRow][quadrille.mouseCol]);
-}
-
-function keyPressed() {
-  console.log(arr[quadrille.mouseRow]);
-}
-{{< /p5-global-iframe >}}
-
-{{< details title="code" open=false >}}
-```js
-let quadrille;
-let arr;
-
-function setup() {
-  createCanvas(4 * Quadrille.CELL_LENGTH, 4 * Quadrille.CELL_LENGTH);
-  quadrille = createQuadrille(4, 4, 7, 75);
-  arr = quadrille.memory2D;
-}
-
-function draw() {
-  background('#6495ED');
-  drawQuadrille(quadrille);
-}
-
-function mouseClicked() {
-  console.log(arr[quadrille.mouseRow][quadrille.mouseCol]);
-}
-
-function keyPressed() {
-  console.log(arr[quadrille.mouseRow]);
-}
-```
-{{< /details >}}
-
-## Write
+# Example
 
 (mouse click or press any key)  
 {{< p5-global-iframe lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" id="number" width="425" height="425" >}}
@@ -81,16 +25,22 @@ function draw() {
 }
 
 function mouseClicked() {
+  // property write
   quadrille.memory2D = [
     [150, 100],
     [null, '🫏'],
     [0, 70],
     ['🦂']
   ];
+  // property read
+  console.log(quadrille.memory2D[quadrille.mouseRow][quadrille.mouseCol]);
 }
 
 function keyPressed() {
+  // property write
   quadrille.memory2D = ['🫏','🐍', '🦂', '🐵'];
+  // property read
+  console.log(quadrille.memory2D[quadrille.mouseRow]);
 }
 {{< /p5-global-iframe >}}
 
@@ -109,16 +59,22 @@ function draw() {
 }
 
 function mouseClicked() {
+  // property write
   quadrille.memory2D = [
     [150, 100],
     [null, '🫏'],
     [0, 70],
     ['🦂']
   ];
+  // property read
+  console.log(quadrille.memory2D[quadrille.mouseRow][quadrille.mouseCol]);
 }
 
 function keyPressed() {
+  // property write
   quadrille.memory2D = ['🫏','🐍', '🦂', '🐵'];
+  // property read
+  console.log(quadrille.memory2D[quadrille.mouseRow]);
 }
 ```
 {{< /details >}}
