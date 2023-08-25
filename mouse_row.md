@@ -14,7 +14,7 @@ The `mouseRow` property isn't constrain to lie in [0..[height]({{< ref "height" 
 
 # Example
 
-{{< p5-global-iframe lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" id="number" width="425" height="425" >}}
+{{< p5-global-iframe lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" width="425" height="425" >}}
 `use strict`;
 Quadrille.CELL_LENGTH = 50;
 let quadrille;
