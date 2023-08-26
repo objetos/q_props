@@ -16,7 +16,8 @@ let quadrille;
 
 function setup() {
   createCanvas(8 * Quadrille.CELL_LENGTH, 8 * Quadrille.CELL_LENGTH);
-  quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)), 15, '🦂');
+  quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)));
+  quadrille.rand(int(quadrille.size * 0.6), '🦂');
 }
 
 function draw() {
@@ -33,7 +34,8 @@ let quadrille;
 
 function setup() {
   createCanvas(8 * Quadrille.CELL_LENGTH, 8 * Quadrille.CELL_LENGTH);
-  quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)), 15, '🦂');
+  quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)));
+  quadrille.rand(int(quadrille.size * 0.6), '🦂');
 }
 
 function draw() {
