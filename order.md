@@ -11,11 +11,11 @@ Read-only property that retrieves the quadrille non-empty number of cells.
 
 {{< p5-global-iframe lib1="https://cdn.jsdelivr.net/gh/objetos/p5.quadrille.js/p5.quadrille.js" width="425" height="425" >}}
 `use strict`;
-Quadrille.CELL_LENGTH = 50;
+Quadrille.cellLength = 50;
 let quadrille;
 
 function setup() {
-  createCanvas(8 * Quadrille.CELL_LENGTH, 8 * Quadrille.CELL_LENGTH);
+  createCanvas(8 * Quadrille.cellLength, 8 * Quadrille.cellLength);
   quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)), int(random(5, 30)), '🐍');
 }
 
@@ -28,11 +28,11 @@ function draw() {
 
 {{< details title="code" open=false >}}
 ```js
-Quadrille.CELL_LENGTH = 50;
+Quadrille.cellLength = 50;
 let quadrille;
 
 function setup() {
-  createCanvas(8 * Quadrille.CELL_LENGTH, 8 * Quadrille.CELL_LENGTH);
+  createCanvas(8 * Quadrille.cellLength, 8 * Quadrille.cellLength);
   quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)),
                               int(random(5, 30)), '🐍');
 }

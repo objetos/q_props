@@ -15,7 +15,7 @@ Quadrille memory read-write property.
 let quadrille;
 
 function setup() {
-  createCanvas(4 * Quadrille.CELL_LENGTH, 4 * Quadrille.CELL_LENGTH);
+  createCanvas(4 * Quadrille.cellLength, 4 * Quadrille.cellLength);
   quadrille = createQuadrille(4, 4);
 }
 
@@ -49,7 +49,7 @@ function keyPressed() {
 let quadrille;
 
 function setup() {
-  createCanvas(4 * Quadrille.CELL_LENGTH, 4 * Quadrille.CELL_LENGTH);
+  createCanvas(4 * Quadrille.cellLength, 4 * Quadrille.cellLength);
   quadrille = createQuadrille(4, 4);
 }
 
