@@ -1,9 +1,8 @@
 ---
 weight: 6
 draft: false
+title: "height"
 ---
-
-# height
 
 Quadrille height read-write property.
 

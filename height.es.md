@@ -1,9 +1,8 @@
 ---
 weight: 6  
 draft: false
+title: "height"
 ---
-
-# height
 
 Propiedad de lectura y escritura de la altura de la cuadrícula.
 
