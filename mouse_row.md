@@ -1,9 +1,8 @@
 ---
 weight: 1
 draft: false
+title: mouseRow
 ---
-
-# mouseRow
 
 Read-only property that retrieves the quadrille row under the current mouse position.
 

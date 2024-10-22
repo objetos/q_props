@@ -1,9 +1,8 @@
 ---
 weight: 7
 draft: false
+title: memory2D
 ---
-
-# memory2D
 
 Quadrille memory read-write property.
 

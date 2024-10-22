@@ -1,9 +1,8 @@
 ---
 weight: 2
 draft: false
+title: mouseCol
 ---
-
-# mouseCol
 
 Read-only property that retrieves the quadrille col under the current mouse position.
 

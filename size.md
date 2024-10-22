@@ -1,9 +1,8 @@
 ---
 weight: 3
 draft: false
+title: size
 ---
-
-# size
 
 Read-only property that retrieves the quadrille width times the quadrille height.
 

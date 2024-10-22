@@ -1,9 +1,8 @@
 ---
 weight: 5
 draft: false
+title: width
 ---
-
-# width
 
 Quadrille width read-write property.
 
