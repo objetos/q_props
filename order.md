@@ -8,7 +8,7 @@ title: order
 
 Read-only property that retrieves the quadrille non-empty number of cells.
 
-# Example
+## Example
 
 {{< p5-global-iframe quadrille="true" width="425" height="425" >}}
 `use strict`;
@@ -46,6 +46,6 @@ function draw() {
 ```
 {{< /details >}}
 
-# Syntax
+## Syntax
 
 > number = quadrille.order

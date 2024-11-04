@@ -12,7 +12,7 @@ Read-only property that retrieves the quadrille col under the current mouse posi
 2. If the quadrille isn't currently being drawn use [screenCol]({{< ref "screen_col" >}}) instead.
 {{< /callout >}}
 
-# Example
+## Example
 
 {{< p5-global-iframe quadrille="true" width="425" height="425" >}}
 `use strict`;
@@ -49,6 +49,6 @@ function draw() {
 ```
 {{< /details >}}
 
-# Syntax
+## Syntax
 
 > number = quadrille.mouseCol

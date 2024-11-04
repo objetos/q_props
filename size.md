@@ -6,7 +6,7 @@ title: size
 
 Read-only property that retrieves the quadrille width times the quadrille height.
 
-# Example
+## Example
 
 {{< p5-global-iframe quadrille="true" width="425" height="425" >}}
 `use strict`;
@@ -45,6 +45,6 @@ function draw() {
 ```
 {{< /details >}}
 
-# Syntax
+## Syntax
 
 > number = quadrille.size

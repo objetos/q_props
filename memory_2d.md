@@ -6,7 +6,7 @@ title: memory2D
 
 Quadrille memory read-write property.
 
-# Example
+## Example
 
 (mouse click or press any key)  
 {{< p5-global-iframe quadrille="true" width="425" height="425" >}}
@@ -78,7 +78,7 @@ function keyPressed() {
 ```
 {{< /details >}}
 
-# Syntax
+## Syntax
 
 > quadrille.memory2D = arr
 
