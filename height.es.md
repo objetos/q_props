@@ -10,7 +10,7 @@ Propiedad de lectura y escritura de la altura de la cuadrícula.
 
 (haz clic o presiona cualquier tecla)  
 {{< p5-global-iframe quadrille="true" width="425" height="425" >}}
-`use strict`;
+'use strict';
 Quadrille.cellLength = 50;
 let quadrille;
 
