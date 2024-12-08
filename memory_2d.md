@@ -4,7 +4,7 @@ draft: false
 title: memory2D
 ---
 
-Quadrille memory read-write property.
+Quadrille memory read-write property. TODO always returns a square array where empty cells are filled with `null` (even if they are filled with `undefined` with the memory2D set).
 
 ## Example
 
