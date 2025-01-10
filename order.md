@@ -8,7 +8,7 @@ Read-only property that retrieves the quadrille non-empty number of cells.
 
 ## Example
 
-(mouse click to toggle video playback or press any key to change quadrille order (& size))  
+(mouse click to toggle video playback; press any key to change quadrille order (& size))  
 {{< p5-global-iframe quadrille="true" width="425" height="425" >}}
 'use strict';
 let destino; // Video variable
