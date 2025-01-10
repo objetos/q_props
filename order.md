@@ -4,44 +4,83 @@ draft: false
 title: order
 ---
 
-# order
-
 Read-only property that retrieves the quadrille non-empty number of cells.
 
 ## Example
 
+(mouse click to toggle video playback or press any key to change quadrille order (& size))  
 {{< p5-global-iframe quadrille="true" width="425" height="425" >}}
 'use strict';
-Quadrille.cellLength = 50;
+let destino; // Video variable
 let quadrille;
 
+function preload() {
+  // Load video in preload
+  destino = createVideo(['/videos/destino.webm']);
+  destino.hide(); // Hide video controls
+}
+
 function setup() {
-  createCanvas(8 * Quadrille.cellLength, 8 * Quadrille.cellLength);
-  quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)), int(random(5, 30)), '🐍');
+  createCanvas(400, 400);
+  quadrille = createQuadrille(8, 8, int(random(1, 64)), destino);
 }
 
 function draw() {
-  background('#6495ED');
-  drawQuadrille(quadrille);
-  text('order: ' + quadrille.order, 20, 20);
+  background('black');
+  drawQuadrille(quadrille, { cellLength: 400 / quadrille.width });
+  fill('yellow');
+  text('order: ' + quadrille.order + ', size: ' + quadrille.size, 20, 20);
+}
+
+function mouseClicked() {
+  // Toggle video playback on mouse click
+  destino.looping ? destino.pause() : destino.loop();
+  destino.looping = !destino.looping;
+}
+
+function keyPressed() {
+  const dim = int(random(1, 8));
+  //const size = dim ** 2; // Equivalent to: size = pow(dim, 2);
+  const size = pow(dim, 2);
+  const order = int(random(1, size));
+  quadrille = createQuadrille(dim, dim, order, destino);
 }
 {{< /p5-global-iframe >}}
 
 {{< details title="code" open=false >}}
 ```js
-Quadrille.cellLength = 50;
+let destino; // Video variable
 let quadrille;
 
+function preload() {
+  // Load video in preload
+  destino = createVideo(['/videos/destino.webm']);
+  destino.hide(); // Hide video controls
+}
+
 function setup() {
-  createCanvas(8 * Quadrille.cellLength, 8 * Quadrille.cellLength);
-  quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)),
-                              int(random(5, 30)), '🐍');
+  createCanvas(400, 400);
+  quadrille = createQuadrille(8, 8, int(random(1, 64)), destino);
 }
 
 function draw() {
-  background('#6495ED');
-  drawQuadrille(quadrille);
-  text('order: ' + quadrille.order, 20, 20);
+  background('black');
+  drawQuadrille(quadrille, { cellLength: 400 / quadrille.width });
+  fill('yellow');
+  text('order: ' + quadrille.order + ', size: ' + quadrille.size, 20, 20);
+}
+
+function mouseClicked() {
+  // Toggle video playback on mouse click
+  destino.looping ? destino.pause() : destino.loop();
+  destino.looping = !destino.looping;
+}
+
+function keyPressed() {
+  const dim = int(random(1, 8));
+  const size = dim ** 2; // Equivalent to: size = pow(dim, 2);
+  const order = int(random(1, size));
+  quadrille = createQuadrille(dim, dim, order, destino);
 }
 ```
 {{< /details >}}

@@ -4,7 +4,7 @@ draft: false
 title: memory2D
 ---
 
-Quadrille memory read-write property. TODO always returns a square array where empty cells are filled with `null` (even if they are filled with `undefined` with the memory2D set).
+Quadrille memory read-write property. Always returns a square array where empty cells are filled with `null` (even if they are filled with `undefined` when the `memory2D` is set).
 
 ## Example
 
@@ -12,67 +12,78 @@ Quadrille memory read-write property. TODO always returns a square array where e
 {{< p5-global-iframe quadrille="true" width="425" height="425" >}}
 'use strict';
 let quadrille;
+let img;
+
+function preload() {
+  img = loadImage('/images/pola.jpg'); // Load an image
+}
 
 function setup() {
   createCanvas(4 * Quadrille.cellLength, 4 * Quadrille.cellLength);
-  quadrille = createQuadrille(4, 4);
+  quadrille = createQuadrille(4, 4); // Create a 4x4 Quadrille
 }
 
 function draw() {
-  background('#6495ED');
-  drawQuadrille(quadrille);
+  background('#6495ED'); // Light blue background
+  drawQuadrille(quadrille); // Draw the Quadrille
 }
 
 function mouseClicked() {
-  // property write
+  // Write new memory structure
   quadrille.memory2D = [
-    [150, 100],
-    [null, '🫏'],
+    [150, img], // Fill with numbers and image
+    [null, '🫏'], // The null represents an empty cell
     [0, 70],
     ['🦂']
   ];
-  // property read
+  // Read and log the clicked cell value
   console.log(quadrille.memory2D[quadrille.mouseRow][quadrille.mouseCol]);
 }
 
 function keyPressed() {
-  // property write
-  quadrille.memory2D = ['🫏','🐍', '🦂', '🐵'];
-  // property read
+  // Write a different memory structure (1D converted to square)
+  quadrille.memory2D = ['🫏', '🐍', '🦂', '🐵'];
+  // Read and log the clicked row
   console.log(quadrille.memory2D[quadrille.mouseRow]);
 }
 {{< /p5-global-iframe >}}
 
 {{< details title="code" open=false >}}
-```js
+```javascript
+'use strict';
 let quadrille;
+let img;
+
+function preload() {
+  img = loadImage('/images/pola.jpg'); // Load an image
+}
 
 function setup() {
   createCanvas(4 * Quadrille.cellLength, 4 * Quadrille.cellLength);
-  quadrille = createQuadrille(4, 4);
+  quadrille = createQuadrille(4, 4); // Create a 4x4 Quadrille
 }
 
 function draw() {
-  background('#6495ED');
-  drawQuadrille(quadrille);
+  background('#6495ED'); // Light blue background
+  drawQuadrille(quadrille); // Draw the Quadrille
 }
 
 function mouseClicked() {
-  // property write
+  // Write new memory structure
   quadrille.memory2D = [
-    [150, 100],
-    [null, '🫏'],
+    [150, img], // Fill with numbers and image
+    [null, '🫏'], // The null represents an empty cell
     [0, 70],
     ['🦂']
   ];
-  // property read
+  // Read and log the clicked cell value
   console.log(quadrille.memory2D[quadrille.mouseRow][quadrille.mouseCol]);
 }
 
 function keyPressed() {
-  // property write
-  quadrille.memory2D = ['🫏','🐍', '🦂', '🐵'];
-  // property read
+  // Write a different memory structure (1D converted to square)
+  quadrille.memory2D = ['🫏', '🐍', '🦂', '🐵'];
+  // Read and log the clicked row
   console.log(quadrille.memory2D[quadrille.mouseRow]);
 }
 ```

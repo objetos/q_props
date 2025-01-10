@@ -21,7 +21,7 @@ let quadrille;
 
 function setup() {
   createCanvas(8 * Quadrille.cellLength, 8 * Quadrille.cellLength);
-  quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)));
+  quadrille = createQuadrille(4, 8);
 }
 
 function draw() {
@@ -38,7 +38,7 @@ let quadrille;
 
 function setup() {
   createCanvas(8 * Quadrille.cellLength, 8 * Quadrille.cellLength);
-  quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)));
+  quadrille = createQuadrille(4, 8);
 }
 
 function draw() {

@@ -16,8 +16,7 @@ let quadrille;
 
 function setup() {
   createCanvas(8 * Quadrille.cellLength, 8 * Quadrille.cellLength);
-  quadrille = createQuadrille(8, int(random(1, 9)));
-  quadrille.rand(int(quadrille.size * 0.6), '🐒');
+  quadrille = createQuadrille(8, 8);
 }
 
 function draw() {
@@ -27,16 +26,9 @@ function draw() {
   text('height: ' + quadrille.height, 20, 20);
 }
 
-function mouseClicked() {
+function mouseMoved() {
   // property write
-  quadrille.height = int(random(1, 9));
-  quadrille.rand(int(quadrille.size * 0.6), '🐒');
-}
-
-function keyPressed() {
-  // property write
-  quadrille.height = int(random(1, 9));
-  quadrille.rand(int(quadrille.size * 0.6), '🐒');
+  quadrille.height = quadrille.mouseRow;
 }
 {{< /p5-global-iframe >}}
 
@@ -47,8 +39,7 @@ let quadrille;
 
 function setup() {
   createCanvas(8 * Quadrille.cellLength, 8 * Quadrille.cellLength);
-  quadrille = createQuadrille(8, int(random(1, 9)));
-  quadrille.rand(int(quadrille.size * 0.6), '🐒');
+  quadrille = createQuadrille(8, 8);
 }
 
 function draw() {
@@ -58,16 +49,9 @@ function draw() {
   text('height: ' + quadrille.height, 20, 20);
 }
 
-function mouseClicked() {
+function mouseMoved() {
   // property write
-  quadrille.height = int(random(1, 9));
-  quadrille.rand(int(quadrille.size * 0.6), '🐒');
-}
-
-function keyPressed() {
-  // property write
-  quadrille.height = int(random(1, 9));
-  quadrille.rand(int(quadrille.size * 0.6), '🐒');
+  quadrille.height = quadrille.mouseRow;
 }
 ```
 {{< /details >}}
