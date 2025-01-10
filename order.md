@@ -27,7 +27,7 @@ function setup() {
 
 function draw() {
   background('black');
-  drawQuadrille(quadrille, { cellLength: 400 / quadrille.width });
+  drawQuadrille(quadrille, { cellLength: width / quadrille.width });
   fill('yellow');
   text('order: ' + quadrille.order + ', size: ' + quadrille.size, 20, 20);
 }
@@ -65,7 +65,7 @@ function setup() {
 
 function draw() {
   background('black');
-  drawQuadrille(quadrille, { cellLength: 400 / quadrille.width });
+  drawQuadrille(quadrille, { cellLength: width / quadrille.width });
   fill('yellow');
   text('order: ' + quadrille.order + ', size: ' + quadrille.size, 20, 20);
 }
