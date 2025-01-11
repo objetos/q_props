@@ -28,7 +28,7 @@ function draw() {
 
 function mouseMoved() {
   // property write
-  quadrille.height = quadrille.mouseRow;
+  quadrille.height = quadrille.mouseRow + 1;
 }
 {{< /p5-global-iframe >}}
 
@@ -51,7 +51,7 @@ function draw() {
 
 function mouseMoved() {
   // property write
-  quadrille.height = quadrille.mouseRow;
+  quadrille.height = quadrille.mouseRow + 1;
 }
 ```
 {{< /details >}}

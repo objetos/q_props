@@ -28,7 +28,7 @@ function draw() {
 
 function mouseMoved() {
   // property write
-  quadrille.width = quadrille.mouseCol;
+  quadrille.width = quadrille.mouseCol + 1;
 }
 {{< /p5-global-iframe >}}
 
@@ -51,7 +51,7 @@ function draw() {
 
 function mouseMoved() {
   // property write
-  quadrille.width = quadrille.mouseCol;
+  quadrille.width = quadrille.mouseCol + 1;
 }
 ```
 {{< /details >}}
