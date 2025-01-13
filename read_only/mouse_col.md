@@ -7,7 +7,6 @@ title: mouseCol
 Read-only property that retrieves the quadrille col under the current mouse position.
 
 {{< callout type="warning" >}}
-**Observations**  
 1. The `mouseCol` property isn't constrain to lie in [0..[width]({{< ref "width" >}})].
 2. If the quadrille isn't currently being drawn use [screenCol]({{< ref "screen_col" >}}) instead.
 {{< /callout >}}

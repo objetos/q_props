@@ -7,7 +7,6 @@ title: mouseRow
 Read-only property that retrieves the quadrille row under the current mouse position.
 
 {{< callout type="warning" >}}
-**Observations**  
 1. The `mouseRow` property isn't constrain to lie in [0..[height]({{< ref "height" >}})].
 2. If the quadrille isn't currently being drawn use [screenRow]({{< ref "screen_row" >}}) instead.
 {{< /callout >}}
