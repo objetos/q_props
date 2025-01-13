@@ -1,10 +1,10 @@
 ---
-weight: 6
+weight: 1
 draft: false
-title: "height"
+title: width
 ---
 
-Quadrille height read-write property.
+Quadrille width read-write property.
 
 ## Example
 
@@ -23,12 +23,12 @@ function draw() {
   background('#6495ED');
   drawQuadrille(quadrille);
   // property read
-  text('height: ' + quadrille.height, 20, 20);
+  text('width: ' + quadrille.width, 20, 20);
 }
 
 function mouseMoved() {
   // property write
-  quadrille.height = quadrille.mouseRow + 1;
+  quadrille.width = quadrille.mouseCol + 1;
 }
 {{< /p5-global-iframe >}}
 
@@ -46,18 +46,18 @@ function draw() {
   background('#6495ED');
   drawQuadrille(quadrille);
   // property read
-  text('height: ' + quadrille.height, 20, 20);
+  text('width: ' + quadrille.width, 20, 20);
 }
 
 function mouseMoved() {
   // property write
-  quadrille.height = quadrille.mouseRow + 1;
+  quadrille.width = quadrille.mouseCol + 1;
 }
 ```
 {{< /details >}}
 
 ## Syntax
 
-> quadrille.height = number
+> quadrille.width = number
 
-> number = quadrille.height
+> number = quadrille.width

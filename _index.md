@@ -5,21 +5,12 @@ title: Properties
 draft: false  
 ---
 
-The `Quadrille` object offers a set of **properties** that are categorized into **read-only** and **read/write** groups. These properties allow you to inspect or modify the state and behavior of a quadrille.  
+The **Quadrille** object includes a robust set of **properties** designed to facilitate both state inspection and dynamic configuration. These properties are neatly divided into **read-only** and **read/write** categories, offering intuitive control over the quadrille's behavior and layout. The read-only properties provide valuable insights, while the read/write properties enable direct modifications to shape and content.
 
-## Read-Only Properties  
-Read-only properties provide insights into the quadrille's current state and cannot be directly modified:  
-- **[mouseRow]({{< relref "mouse_row" >}}):** The row index of the cell currently under the mouse pointer.  
-- **[mouseCol]({{< relref "mouse_col" >}}):** The column index of the cell currently under the mouse pointer.  
-- **[size]({{< relref "size" >}}):** The total number of cells in the quadrille.  
-- **[order]({{< relref "order" >}}):** The number of non-empty cells in the quadrille. 
+### **Read-Only Properties**  
+[Read-only properties]({{< relref "read_only" >}}) allow you to inspect the quadrille's current state without altering it. For example, **[mouseRow]({{< relref "mouse_row" >}})** and **[mouseCol]({{< relref "mouse_col" >}})** identify the cell under the mouse pointer, while **[size]({{< relref "size" >}})** and **[order]({{< relref "order" >}})** offer details on the quadrille's total and non-empty cells.
 
-## Read/Write Properties  
-Read/write properties can be both accessed and modified, allowing dynamic control over the quadrille's dimensions and content:  
-- **[width]({{< relref "width" >}}):** The number of columns in the quadrille.  
-- **[height]({{< relref "height" >}}):** The number of rows in the quadrille.  
-- **[memory2D]({{< relref "memory_2d" >}}):** A 2D array that represents the content of each cell.  
+### **Read/Write Properties**  
+In contrast, [read/write properties]({{< relref "read_write" >}}) let you dynamically adjust the quadrille's configuration. For instance, **[width]({{< relref "width" >}})** and **[height]({{< relref "height" >}})** control the quadrille's dimensions, while **[memory2D]({{< relref "memory_2d" >}})** provides a complete 2D representation of its content, enabling full customization.
 
-Access and modify these properties using **dot notation**, a standard approach in JavaScript for working with object properties.  
-
-By combining these properties, you can efficiently read the quadrille's state and customize its structure to suit your needs.  
+These properties can be easily accessed and manipulated using JavaScript's **dot notation**, making them versatile tools for managing a quadrille's state and structure.
