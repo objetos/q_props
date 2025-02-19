@@ -32,7 +32,7 @@ function mouseMoved() {
 }
 {{< /p5-global-iframe >}}
 
-{{< details title="code" open=false >}}
+{{% details title="code" open=true %}}
 ```js
 Quadrille.cellLength = 50;
 let quadrille;
@@ -54,7 +54,7 @@ function mouseMoved() {
   quadrille.height = quadrille.mouseRow + 1;
 }
 ```
-{{< /details >}}
+{{% /details %}}
 
 ## Syntax
 

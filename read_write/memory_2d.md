@@ -48,7 +48,7 @@ function keyPressed() {
 }
 {{< /p5-global-iframe >}}
 
-{{< details title="code" open=false >}}
+{{% details title="code" open=true %}}
 ```javascript
 'use strict';
 let quadrille;
@@ -87,7 +87,7 @@ function keyPressed() {
   console.log(quadrille.memory2D[quadrille.mouseRow]);
 }
 ```
-{{< /details >}}
+{{% /details %}}
 
 ## Syntax
 

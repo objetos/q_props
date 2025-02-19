@@ -30,7 +30,7 @@ function draw() {
 }
 {{< /p5-global-iframe >}}
 
-{{< details title="code" open=false >}}
+{{% details title="code" open=true %}}
 ```js
 Quadrille.cellLength = 50;
 let quadrille;
@@ -46,7 +46,7 @@ function draw() {
   text('mouseCol: ' + quadrille.mouseCol, 20, 20);
 }
 ```
-{{< /details >}}
+{{% /details %}}
 
 ## Syntax
 

@@ -34,7 +34,7 @@ function keyPressed() {
 }
 {{< /p5-global-iframe >}}
 
-{{< details title="code" open=false >}}
+{{% details title="code" open=true %}}
 ```js
 Quadrille.cellLength = 50;
 let quadrille;
@@ -58,7 +58,7 @@ function keyPressed() {
   quadrille = createQuadrille(int(random(1, 9)), int(random(1, 9)));
 }
 ```
-{{< /details >}}
+{{% /details %}}
 
 ## Syntax
 

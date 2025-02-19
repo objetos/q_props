@@ -47,7 +47,7 @@ function keyPressed() {
 }
 {{< /p5-global-iframe >}}
 
-{{< details title="code" open=false >}}
+{{% details title="code" open=true %}}
 ```js
 let destino; // Video variable
 let quadrille;
@@ -83,7 +83,7 @@ function keyPressed() {
   quadrille = createQuadrille(dim, dim, order, destino);
 }
 ```
-{{< /details >}}
+{{% /details %}}
 
 ## Syntax
 
