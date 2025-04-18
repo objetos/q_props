@@ -14,12 +14,9 @@ Quadrille memory read-write property. Always returns a square array where empty 
 let quadrille;
 let img;
 
-function preload() {
-  img = loadImage('/images/pola.jpg'); // Load an image
-}
-
-function setup() {
+async function setup() {
   createCanvas(4 * Quadrille.cellLength, 4 * Quadrille.cellLength);
+  img = await loadImage('/images/pola.jpg'); // Load an image
   quadrille = createQuadrille(4, 4); // Create a 4x4 Quadrille
 }
 
@@ -54,12 +51,9 @@ function keyPressed() {
 let quadrille;
 let img;
 
-function preload() {
-  img = loadImage('/images/pola.jpg'); // Load an image
-}
-
-function setup() {
+async function setup() {
   createCanvas(4 * Quadrille.cellLength, 4 * Quadrille.cellLength);
+  img = await loadImage('/images/pola.jpg'); // Load an image
   quadrille = createQuadrille(4, 4); // Create a 4x4 Quadrille
 }
 

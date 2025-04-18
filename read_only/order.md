@@ -14,14 +14,11 @@ Read-only property that retrieves the quadrille non-empty number of cells.
 let destino; // Video variable
 let quadrille;
 
-function preload() {
-  // Load video in preload
-  destino = createVideo(['/videos/destino.webm']);
-  destino.hide(); // Hide video controls
-}
-
-function setup() {
+async function setup() {
   createCanvas(400, 400);
+  // Load video
+  destino = await createVideo(['/videos/destino.webm']);
+  destino.hide(); // Hide video controls
   quadrille = createQuadrille(8, 8, int(random(1, 64)), destino);
 }
 
@@ -52,14 +49,11 @@ function keyPressed() {
 let destino; // Video variable
 let quadrille;
 
-function preload() {
-  // Load video in preload
-  destino = createVideo(['/videos/destino.webm']);
-  destino.hide(); // Hide video controls
-}
-
-function setup() {
+async function setup() {
   createCanvas(400, 400);
+  // Load video
+  destino = await createVideo(['/videos/destino.webm']);
+  destino.hide(); // Hide video controls
   quadrille = createQuadrille(8, 8, int(random(1, 64)), destino);
 }
 
