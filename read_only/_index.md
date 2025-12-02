@@ -10,4 +10,5 @@ Read-only properties provide insights into the quadrille's current state and can
 - **[mouseRow]({{< relref "mouse_row" >}}):** The row index of the cell currently under the mouse pointer.  
 - **[mouseCol]({{< relref "mouse_col" >}}):** The column index of the cell currently under the mouse pointer.  
 - **[size]({{< relref "size" >}}):** The total number of cells in the quadrille.  
-- **[order]({{< relref "order" >}}):** The number of non-empty cells in the quadrille. 
+- **[order]({{< relref "order" >}}):** The number of non-empty cells in the quadrille.  
+- **[span]({{< relref "span" >}}):** The smallest axis-aligned rectangle that contains all filled cells in the quadrille.  
