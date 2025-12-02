@@ -4,11 +4,11 @@ draft: false
 title: span
 ---
 
-Gets the minimal axis-aligned span of filled cells as the object `{row, col, width, height}`. Returns `undefined` if the quadrille has no filled cells.
+Gets the smallest axis-aligned rectangle that contains all filled cells. Returns an object of the form `{ row, col, width, height }`, or `undefined` if the quadrille is entirely empty.
 
 ## Example
 
-(mouse click to toggle emojis; press any key to randomizechange quadrille order & size)  
+(mouse click to toggle emojis; press any key to randomize the quadrille)  
 {{< p5-global-iframe quadrille="true" width="475" height="325" >}}
 'use strict';
 
@@ -20,13 +20,13 @@ let span;
 function setup() {
   createCanvas(15 * Quadrille.cellLength, 10 * Quadrille.cellLength);
   q = createQuadrille(15, 10, 8, '😼');
-  reset();
+  update();
 }
 
 function draw() {
   background('BlueViolet');
   drawQuadrille(q);
-  drawQuadrille(p, { col: span.col, row: span.row, outline: 'yellow' });
+  span && drawQuadrille(p, { col: span.col, row: span.row, outline: 'yellow' });
 }
 
 function mouseClicked() {
@@ -34,18 +34,18 @@ function mouseClicked() {
   const col = q.mouseCol;
   if (q.isValid(row, col)) {
     q.isFilled(row, col) ? q.clear(row, col) : q.fill(row, col, '🐦');
-    reset();
+    update();
   }
 }
 
 function keyPressed() {
   q.randomize();
-  reset();
+  update();
 }
 
-function reset() {
+function update() {
   span = q.span;
-  p = createQuadrille(span.width, span.height);
+  p = span && createQuadrille(span.width, span.height);
 }
 {{< /p5-global-iframe >}}
 
@@ -59,13 +59,13 @@ let span;
 function setup() {
   createCanvas(15 * Quadrille.cellLength, 10 * Quadrille.cellLength);
   q = createQuadrille(15, 10, 8, '😼');
-  reset();
+  update();
 }
 
 function draw() {
   background('BlueViolet');
   drawQuadrille(q);
-  drawQuadrille(p, { col: span.col, row: span.row, outline: 'yellow' });
+  span && drawQuadrille(p, { col: span.col, row: span.row, outline: 'yellow' });
 }
 
 function mouseClicked() {
@@ -73,18 +73,18 @@ function mouseClicked() {
   const col = q.mouseCol;
   if (q.isValid(row, col)) {
     q.isFilled(row, col) ? q.clear(row, col) : q.fill(row, col, '🐦');
-    reset();
+    update();
   }
 }
 
 function keyPressed() {
   q.randomize();
-  reset();
+  update();
 }
 
-function reset() {
+function update() {
   span = q.span;
-  p = createQuadrille(span.width, span.height);
+  p = span && createQuadrille(span.width, span.height);
 }
 ```
 {{% /details %}}
